@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+	#colorPicker
+		a(data-color="#F64747" data-cursor="red.png") red
+		a(data-color="#2ECC71" data-cursor="green.png") green
+		a(data-color="#22A7F0" data-cursor="blue.png") blue
+		a(data-color="#F9BF3B" data-cursor="yellow.png") yellow
+
+	#square
+		- for (var i = 0; i < 400; ++i) {
+			div(class="box" id="box-#{i}" data-background="gray")
+		- }
+
