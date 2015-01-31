@@ -1,10 +1,30 @@
 var express = require('express');
 var router = express.Router();
-var io = require('socket.io');
+var color = require('colourlovers');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Drawing App' });
 });
+
+router.get('/draw', function(req, res, next) {
+  res.render('draw', { title: 'Drawing App' });
+});
+
+
+
+
+//API functions
+
+color.get('/palettes', {
+        hueOption:  'blue',
+        keywords:   'chartreuse',
+        sortBy:     'DESC',
+        numResults: 20
+    },function(err, data) {
+    if(err) throw err;
+    console.log(data);
+});
+
 
 module.exports = router;
