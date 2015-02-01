@@ -4,11 +4,11 @@ var color = require('colourlovers');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Drawing App' });
+  res.render('index', { title: 'PixDraw' });
 });
 
 router.get('/draw', function(req, res, next) {
-  res.render('draw', { title: 'Drawing App' });
+  res.render('draw', { title: 'PixDraw - Draw Square' });
 });
 
 router.get('/draw2', function(req, res, next) {
@@ -16,7 +16,7 @@ router.get('/draw2', function(req, res, next) {
 });
 
 router.get('/features', function(req, res, next) {
-  res.render('features', { title: 'Drawing App' });
+  res.render('features', { title: 'PixDraw - Roadmap' });
 });
 
 
