@@ -4,7 +4,7 @@ block content
 
 	.box-content.row
 		.col-md-12
-			input(type='text' class='text-field' placeholder="Enter Title")
+			input(type='text' class='text-field' placeholder="Enter Title (A feature in the future will use this)")
 		.col-md-12
 			#square
 				- for (var i = 0; i < 400; ++i) {
@@ -13,7 +13,18 @@ block content
 
 	.row.menu
 		.col-md-12
-			input(type='text' id='colorPicker')
 			p Color picker
-	a(id='image' class='btn btn-default') image
+			input(type='text' id='colorPicker')
+		.col-md-12#button-box
+			a(id='image' class='button btn-default') Get my Image!
+
+	.footer.footer-inner
+		.footer-left
+				a(href="/") home
+				a(href="/features") Roadmap
+		.footer-right
+			p Crafted by 
+				a(href="https://twitter.com/itsdpark" target='_blank') @itsdpark
+			p Stealing code 
+				a(href="https://github.com/dparkd/Pixdraw" target='_blank') @github
 

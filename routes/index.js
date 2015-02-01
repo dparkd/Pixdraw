@@ -15,6 +15,10 @@ router.get('/draw2', function(req, res, next) {
   res.render('draw2', { title: 'Drawing App' });
 });
 
+router.get('/features', function(req, res, next) {
+  res.render('features', { title: 'Drawing App' });
+});
+
 
 
 

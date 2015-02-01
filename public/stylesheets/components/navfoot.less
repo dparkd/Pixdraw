@@ -15,21 +15,45 @@
 
 
 // FOOTER
-#footer{
+.footer{
 	position:fixed;
 	width:100%;
 	left: 0;
-	padding: 0 20px;
 	z-index:9999;
 	bottom:20px;
 	color: white;
 	font-family:'thin-pixel';
+	.footer-right{
+		width: 50%;
+		float: right;
+		text-align:right;
+		p{
+			margin: 0;
+			padding-right: 20px;
+		}
+	}
+	.footer-left{
+		width:50%;
+		float: left;
+		a{
+			padding-left:20px;
+		}
+	}
+	p{
+		display: inline-block;
+		padding-left: 15px;
+	}
 	a{
 		color:white;
 		text-decoration: underline;
 	}
 }
-
+.footer-inner{
+	color: @blue;
+	a{
+		color:@blue;
+	}
+}
 
 
 
