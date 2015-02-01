@@ -16,16 +16,27 @@ $(document).ready(function(){
 	$('.box').on('mouseenter', enterBox);
 
 	$("#colorPicker").spectrum({
-    color: "#f00",
+    color: "#22A7F0",
     change: function(color) {
         currentColor = color.toHexString();
         console.log(currentColor);
     }
 	});
 
+	$('#image').on('click', toImg);
+
 });
 
 //Functions =============================
+function toImg() {
+	html2canvas($('#square'), {
+	  onrendered: function(canvas) {
+	    var img = canvas.toDataURL()
+	    window.open(img);
+	  }
+	});
+}
+
 //Change color on click
 function boxClicked() {
 

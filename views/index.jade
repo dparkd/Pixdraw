@@ -2,5 +2,16 @@ extends layout
 
 block content
 
-	p= title
+	#home
+		h1 Welcome to PixDraw Beta
+		p Draw your very own pixel square and share it via #pixdraw
+
+		a(href='/draw' class='button') Make Square! 
+
+	#footer.row
+		.col-md-6.pull-right.text-right.columns
+			p Crafted by 
+				a(href="https://twitter.com/itsdpark" target='_blank') @itsdpark
+		.col-md-6.columns
+			a(href='/features') Features to Come
 

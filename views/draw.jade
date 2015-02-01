@@ -2,10 +2,18 @@ extends layout
 
 block content
 
-	input(type='text' id='colorPicker')
+	.box-content.row
+		.col-md-12
+			input(type='text' class='text-field' placeholder="Enter Title")
+		.col-md-12
+			#square
+				- for (var i = 0; i < 400; ++i) {
+					div(class="box" id="box-#{i}")
+				- }
 
-	#square
-		- for (var i = 0; i < 400; ++i) {
-			div(class="box" id="box-#{i}")
-		- }
+	.row.menu
+		.col-md-12
+			input(type='text' id='colorPicker')
+			p Color picker
+	a(id='image' class='btn btn-default') image
 

@@ -1,0 +1,42 @@
+//input 
+.text-field{
+	margin: 0 auto;
+	border:0 ;
+	border-bottom:2px solid #f1f1f1;
+}
+
+//box-content
+.box-content{
+	text-align: center;
+	input{
+		margin-bottom: 30px;
+		width: 400px;
+		outline: none;
+		color: @blue;
+		font-family: 'thin-pixel';
+	}
+	input:focus{
+		border-bottom:2px solid @blue;
+	}
+}
+
+//drawing square
+#square{
+	margin: 0 auto;
+	width: 400px;
+	height: 400px;
+	&:hover{
+		cursor: crosshair;
+	}
+}
+
+//Set pixel width
+.box{
+	width: @pixel;
+	height: @pixel;
+	background: #333;
+	float: left;
+	&:hover{
+		box-shadow:1px solid white;
+	}
+}

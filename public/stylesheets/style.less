@@ -1,9 +1,9 @@
-@import 'variables';
-
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	cursor: crosshair;
+}
+.row{
+	margin: 0;
 }
 
 a {
@@ -14,19 +14,10 @@ a {
 	display: block;
 }
 
-#square{
-	margin: 0 auto;
-	width: 400px;
-	height: 400px;
-}
 
-//Set pixel width
-.box{
-	width: @pixel;
-	height: @pixel;
-	background: blue;
-	float: left;
-	&:hover{
-		background: red;
-	}
-}
+@import '/components/variables';
+@import '/components/navfoot';
+@import '/pages/home';
+@import '/components/colorpicker';
+@import '/pages/draw';
+
