@@ -3,8 +3,8 @@ extends layout
 block content
 
 	.box-content.row
-		.col-md-12
-			input(type='text' class='text-field' placeholder="Enter Title (A feature in the future will use this)")
+		//- .col-md-12
+		//- 	input(type='text' class='text-field' placeholder="Enter Title (A feature in the future will use this)")
 		.col-md-12
 			#square
 				- for (var i = 0; i < 400; ++i) {
@@ -15,8 +15,15 @@ block content
 		.col-md-12
 			p Color picker
 			input(type='text' id='colorPicker')
+			p Recently Used Colors
+			- for (var i = 0; i < 10; i++) {
+				div(class="colors" id="color-#{i}")
+			- }
 		.col-md-12#button-box
 			a(id='image' class='button btn-default') Get my Image!
+		.col-md-12
+			p Have a suggestion? Check the 
+				a(href="/features") Roadmap
 
 	.footer.footer-inner
 		.footer-left
@@ -27,4 +34,6 @@ block content
 				a(href="https://twitter.com/itsdpark" target='_blank') @itsdpark
 			p Stealing code 
 				a(href="https://github.com/dparkd/Pixdraw" target='_blank') @github
+	
 
+	
