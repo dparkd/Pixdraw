@@ -3,6 +3,8 @@ var boxClass = [];
 var currentColor = '#22A7F0';
 var isDragging = false;
 var previousColors = [];
+var eraserColor = '#333';
+var cursorCount = 1;
 
 
 //Dom Ready =============================
@@ -18,11 +20,29 @@ $(document).ready(function(){
 
 	$('.box').on('mouseenter', enterBox);
 
+	//Eraser function
+	$("body").keydown(function(e) {
+	  if(e.keyCode == 69 && cursorCount == 1) { // e
+	  	currentColor = eraserColor;
+	  	$('#square').css('cursor', 'cell');
+	  	cursorCount = 2;
+	  }
+	  else { // other
+	  	if (previousColors.length == 0){
+	  		currentColor = '#22A7F0';
+	  	}else{
+	  		currentColor = previousColors[0];
+	  	}
+	  	$('#square').css('cursor', 'crosshair');
+	  	cursorCount = 1;
+	  }
+	});
+
 	$("#colorPicker").spectrum({
     color: "#22A7F0",
     change: function(color) {
         currentColor = color.toHexString();
-        
+        $('#square').css('cursor', 'crosshair');
         if (previousColors.length === 10){
         	previousColors.pop();
         	previousColors.unshift(color.toHexString());
@@ -90,7 +110,10 @@ function colorClicked(){
 
 }
 
-
+//Eraser Function
+function eraserClick() {
+	console.lo
+}
 
 
 
