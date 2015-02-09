@@ -1,0 +1,38 @@
+extends layout
+
+block content
+	.row.settings
+		.col-md-12
+			h1 Before you start, set some options
+		.col-md-12
+			form(method="post", action="/draw" id="setting-values").form
+				p What aspect ratio would you like?
+				label.canvas-one 1x1
+				label.canvas-two 4x3				
+				select(name='canvasSize')
+					option(value='one') 1x1
+					option(value='two') 4x3
+				p What pixel size would you like? 
+				label.pixel-one
+				label.pixel-two 
+				label.pixel-three 
+				select(name='pixelSize')
+					option(value='5px') 5px
+					option(value='10px') 10px
+					option(value='20px') 20px
+				input(type="submit", class="button btn-default setting-btn")
+
+
+	.footer.footer-inner
+		.footer-left
+				a(href="/") home
+				a(href="/features") Roadmap
+		.footer-right
+			p Crafted by 
+				a(href="https://twitter.com/itsdpark" target='_blank') @itsdpark
+			p Stealing code 
+				a(href="https://github.com/dparkd/Pixdraw" target='_blank') @github
+	//- script
+	//- 	$('.setting-btn').on('click', function() {
+	//- 		if($('.canvas-input'))
+	//- 	})

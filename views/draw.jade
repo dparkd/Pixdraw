@@ -3,9 +3,9 @@ extends layout
 block content
 	.box-content.row
 		.col-md-12
-			#square
-				- for (var i = 0; i < 400; ++i) {
-					div(class="box" id="box-#{i}")
+			#square(style="width:#{width}px; height:#{height}px;")
+				- for (var i = 0; i < pixelNumber; ++i) {
+					div(class="box" id="box-#{i}" style="width: #{pixelSize}; height:#{pixelSize}")
 				- }
 
 	.row.menu
@@ -21,6 +21,7 @@ block content
 		.col-md-12#button-box
 			a(id='image' class='button btn-default') Get my Image!
 		.col-md-12
+			p ** If white lines appear, zoom out the webpage and save image
 			p Have a suggestion? Check the 
 				a(href="/features") Roadmap
 
@@ -36,5 +37,5 @@ block content
 
 
 	#pixel-size
-
+	
 
